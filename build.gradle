@@ -61,7 +61,9 @@ ext {
             '-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE',
             '-DBUILD_opencv_apps=OFF',
             '-DBUILD_TESTS=OFF',
-            '-DBUILD_PERF_TESTS=OFF'
+            '-DBUILD_PERF_TESTS=OFF',
+            '-DOPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules/aruco',
+            '-DCMAKE_CXX_FLAGS=-latomic -DOPENCV_EXTRA_EXE_LINKER_FLAGS=-latomic'
     ]
 }
 
